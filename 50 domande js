@@ -1,0 +1,245 @@
+//21) Date le variabili x = "John" e y = "Doe", mostra in console "John <> Doe"    
+        var x = "John"
+        var y = "Doe"
+        console.log(x + " <> " + y);
+//22) Crea un oggetto con le seguenti proprietà: name, surname, email
+        var person = {
+            name: 'Riccardo',
+            surname: 'Corti',
+            email: 'rickcorti@libero.it'
+        };
+//23) Cancella la proprietà email dall'oggetto appena creato
+        delete person.email;
+        console.log(person);
+
+//24) Crea un array contenente 10 stringhe
+        let arr = ["totti", "giannini", "de rossi", "pellegrini", "diBartolomei", "falcao", "aldair", "dzeko", "florenzi", "pruzzo"];
+
+//25) Mostra in console ogni stringa del precedente array
+        console.log(arr)   
+ 
+//26) Crea un array contenente 100 numeri random
+        let arrayRandom = [];
+        for (let index = 0; index < 100; index++) {
+            let element = Math.random() * 100;
+            let elementParsato = parseInt(element)
+            arrayRandom.push(elementParsato)
+        }
+            console.log(arrayRandom)
+
+//27) Scrivi una funzione per trovare il valore massimo e il valore minimo dall'array appena creato
+        function valori(arrayGen) {
+            let valMax = arrayGen[0];
+            let valMin = arrayGen[0];
+            arrayGen.forEach(element => {
+                if (element < valMin) {
+                    valMin = element;
+                } if (element > valMax) {
+                    valMax = element;
+                }})
+                return {
+                    min: valMin,
+                    max: valMax
+                };
+                };
+        console.log(valori(arrayRandom))
+
+//28) Crea un array di array, nel quale ogni array "figlio" ha 10 numeri random       
+        let arrayMatrioska = [];
+        for (let index = 0; index < 3; index++) {
+                let arrayBambolina = [];   
+            for (let index = 0; index < 10; index++) {
+                let element = Math.random() * 10;
+                let elementParsato = parseInt(element)
+                arrayBambolina.push(elementParsato)
+            }
+                arrayMatrioska.push(arrayBambolina);
+        }
+        console.log(arrayMatrioska)
+ 
+//29) Crea una funzione che riceve 2 array come parametri e ritorni quello con più elementi
+        function dueArray(arrayUno, arrayDue) {
+            if (arrayUno.length > arrayDue.length) {
+                return arrayUno
+            } else {
+                return arrayDue
+            }
+        }
+        let arrayUno = [1,2];
+        let arrayDue = [4,9];
+        console.log(dueArray(arrayUno,arrayDue))  
+        
+//30) Crea una funzione che riceve 2 array numerici come parametri e ritorna quello con la somma totale degli elementi maggiore
+    function sommaArray(arrayUno, arrayDue) {
+        let sommaUno = 0;
+        for (let index = 0; index < arrayUno.length; index++) {
+            const element = arrayUno[index];
+            sommaUno = sommaUno + element;
+ 
+        }
+        let sommaDue = 0;
+        for (let index = 0; index < arrayDue.length; index++) {
+            const element = arrayDue[index];
+            sommaDue = sommaDue + element;
+ 
+        }
+        if (sommaUno > sommaDue) {
+            return arrayUno;
+        }else{
+            return arrayDue;
+        }
+    }
+    console.log("somma ",sommaArray(arrayUno,arrayDue));
+   
+   
+    window.onload = function() {
+//31) Seleziona l'elemento con id "container" nella pagina
+        document.getElementById('container')
+//32) Seleziona tutti gli elementi di tipo <td> nella pagina
+        document.getElementsByTagName("td")
+//33) Usa un ciclo per stampare in console il testo contenuto in ogni elemento <td> nella pagina
+        let td = document.getElementsByTagName("td")
+        for (let index = 0; index < td.length; index++) {
+            const element = td[index];
+            console.log(element.innerText)
+        }
+        
+//34) Scrivi una funzione per cambiare il titolo della pagina
+    function changeTitle(newTitle) {
+        let titolo = document.getElementsByTagName("h1")
+        let titoloNew = titolo[0];
+        titoloNew.innerText = newTitle;
+    }
+    changeTitle("American Breakfast");
+  
+//35) Scrivi una funzione per aggiungere una nuova riga alla tabella nella pagina
+    function addRow() {
+
+        var table = document.getElementById("container");
+        var row = table.insertRow(0);
+        row.innerText = "es. 35 nuova riga"
+        
+    }
+    addRow();
+
+//36) Scrivi una funzione per aggiungere la classe "test" ad ogni riga nella tabella
+    function classTest() {
+        var tr = document.getElementsByTagName('tr');
+        for (let index = 0; index < tr.length; index++) {
+            const element = tr[index];
+            element.classList.add("test");  
+        }
+    }
+    classTest()
+//37) Scrivi una funzione per aggiungere uno sfondo rosso a ogni link presente nella pagina
+    function sfondoRosso() {
+        var link = document.getElementsByTagName('a');
+        for (let index = 0; index < link.length; index++) {
+            const element = link[index];
+            element.style.backgroundColor="red";  
+        }  
+    }
+    sfondoRosso()
+//38) Mostra in console "Page loaded" quando la pagina ha finito di caricarsi
+    //STA IN CODA AGLI ALTRI ESERCIZI (IN FONDO ALLA PAGINA)
+
+//39) Scrivi una funzione per aggiungere nuovi elementi alla lista non ordinata nella pagina
+window.onload = function() {
+    function nuoviElementi() {
+        var ul = document.getElementsByTagName("ul")[0];
+        var li = document.createElement('li')
+        li.innerText = "latte";
+        ul.appendChild(li);
+    }
+    nuoviElementi()
+}
+//40) Scrivi una funzione per svuotare una lista nella pagina
+    function removeElements() {
+        var ul = document.getElementsByTagName("ul")[0];
+        while (ul.hasChildNodes()) {
+            ul.removeChild(ul.firstChild);
+        }
+        
+    }
+    removeElements()
+
+//41) Aggiungi un event listener in modo che compaia un alert quando il cursore passa sopra un link; l'alert deve mostrare la sua proprietà href
+    var link = document.getElementsByTagName('a');
+    for (let index = 0; index < link.length; index++) {
+         link[index].onmouseover = function() {alert(link[index].href)};
+    }
+//42) Crea un bottone che una volta cliccato nasconde ogni immagine nella pagina
+    let body = document.getElementsByTagName('body')[0];
+    let button = document.createElement('button');
+    button.innerText = "Nascondi Obama";
+    button.onclick = function() {
+    let img = document.getElementsByTagName('img');  
+    for (let index = 0; index < img.length; index++) {
+        img[index].style.display="none";    
+    }};
+    body.appendChild(button);
+//43) Crea un bottone che una volta cliccato nasconde o mostra la tabella nella pagina  
+    let bodyTab = document.getElementsByTagName('body')[0];
+    let buttonTab = document.createElement('button');
+    buttonTab.innerText = "Nascondi tabella";
+    buttonTab.onclick = function() {
+    let table = document.getElementsByTagName('table')[0]; 
+    if (table.style.visibility == "visible") {
+        table.style.visibility = "hidden"
+    }else{
+        table.style.visibility = "visible"
+    }
+
+    };
+    bodyTab.appendChild(buttonTab);
+//45) Cancella l'ultima lettera dal titolo della pagina ogni volta che l'utente ci clicca sopra
+    var h1 = document.getElementsByTagName('h1')[0];
+    h1.onclick = function() {
+    h1.innerText = h1.innerText.slice(0, -1)};
+//46) Aggiungi un event listener in modo che cliccando un <td> nella pagina, questo cambi colore di sfondo
+    let tdColor = document.getElementsByTagName('td');
+    for (let index = 0; index < tdColor.length; index++) {
+        let element = tdColor[index];
+        element.onclick = function() {
+            element.style.backgroundColor = 'red';
+        };
+    }    
+//47) Aggiungi un bottone che una volta cliccato elimini un <td> a caso nella tabella
+    let bodySlam = document.getElementsByTagName('body')[0];
+    let tdList = document.getElementsByTagName('td');
+    let buttonTd = document.createElement('button');
+    buttonTd.innerText = "cancella td";
+    buttonTd.onclick = function() {
+        var arr = [].slice.call(tdList);
+        arr.splice(Math.floor(Math.random()*tdList.length), 1);  
+    };
+    bodySlam.appendChild(buttonTd);
+//48) Aggiungi automaticamente un bordo rosa ad una cella della tabella quando il cursore ci passa sopra
+    //vedi css
+//49) Scrivi una funzione per creare una tabella con 4 righe e 3 colonne e aggiungerla alla fine della pagina
+    function newTab() {
+    let newTab = document.createElement('table');
+    let tblBody = document.createElement('tbody');
+    for (var j = 0; j < 4; j++) {
+        var row = document.createElement("tr");
+        for (var i = 0; i < 3; i++) {
+            var cell = document.createElement("td");
+            row.appendChild(cell);
+        }
+    tblBody.appendChild(row);
+    }newTab.appendChild(tblBody);
+    body.appendChild(newTab);
+}
+    newTab()
+//50) Scrivi una funzione per rimuovere l'ultima tabella presente nella pagina
+    function removeTab() {
+        let removeTab = document.getElementsByTagName('table')[1];
+        removeTab.parentNode.removeChild(removeTab);
+    }
+    removeTab();
+}
+
+//38) Mostra in console "Page loaded" quando la pagina ha finito di caricarsi
+window.addEventListener('load', function () {
+    console.log("Page loaded");
+  })
