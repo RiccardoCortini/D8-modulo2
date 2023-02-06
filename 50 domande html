@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <!--
+        ESERCIZI HTML
+
+        1) Assegna un titolo per questa pagina
+        2) Crea un tag h1 con il contenuto che preferisci
+        3) Crea una lista ordinata con alcuni elementi al suo interno
+        4) Crea una tabella con 4 righe e 5 colonne
+        5) Aggiungi un'immagine a ogni seconda cella di ogni riga
+        6) Aggiungi un tag <a> ad ogni immagine
+        7) Unisci insieme 2 celle della tabella
+        8) Dividi la pagina inserendo una riga orizzontale
+        9) Crea un elemento contenitore con al suo interno un paragrafo e una lista non ordinata
+        10) Crea un footer contenente alcune informazioni sul creatore della pagina
+
+        ESERCIZI CSS
+
+        11) Assegna una larghezza massima al tag body e centralo nella pagina
+        12) Centra ogni tag h1
+        13) Cambia il colore di ogni link nella pagina
+        14) Crea una classe e assegnale un bordo
+        15) Fai in modo che la i bordi della tabella che hai creato siano arrotondati
+        16) Aggiungi un margine ad ogni paragrafo
+        17) Crea una classe che una volta assegnata cambi la dimensione e il peso del font
+        18) Crea una classe per nascondere un elemento
+        19) Aggiungi un bordo verde a ogni <td>
+        20) Aggiungi un bordo puntato rosso a ogni <tr> (nota: <tr> non accetta una proprietà "border")
+
+
+        ESERCIZI EXTRA
+
+        41) Aggiungi un event listener in modo che compaia un alert quando il cursore passa sopra un link; l'alert deve mostrare la sua proprietà href
+        42) Crea un bottone che una volta cliccato nasconde ogni immagine nella pagina
+        43) Crea un bottone che una volta cliccato nasconde o mostra la tabella nella pagina
+        44) Crea una funzione per calcolare la somma di ogni numero contenuto in tutte le celle della tabella (se il contenuto è un numero)
+        45) Cancella l'ultima lettera dal titolo della pagina ogni volta che l'utente ci clicca sopra
+        46) Aggiungi un event listener in modo che cliccando un <td> nella pagina, questo cambi colore di sfondo
+        47) Aggiungi un bottone che una volta cliccato elimini un <td> a caso nella tabella
+        48) Aggiungi automaticamente un bordo rosa ad una cella della tabella quando il cursore ci passa sopra
+        49) Scrivi una funzione per creare una tabella con 4 righe e 3 colonne e aggiungerla alla fine della pagina
+        50) Scrivi una funzione per rimuovere l'ultima tabella presente nella pagina
+        
+    --><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <link rel="stylesheet" href="50.css">
+    <script src="50.js"></script>
+    <title>50 splendide domande</title>
+  </head>
+  <body cz-shortcut-listen="true">
+    <h1>Colazione all'americana</h1>
+    <ol class="bordo">
+        <li>caffè</li>
+        <li>pane</li>
+        <li>marmellata</li>
+        <li>burro d'arachidi</li>
+    </ol>
+    <table id="container">
+      <tr class="bordopuntato">
+        <td style="border-radius: 30px 0px 0px 0px;"></td>
+        <td><a href="https://it.wikipedia.org/wiki/Barack_Obama"><img class="obama" src="assets/obama.jpg"></a></td>
+        <td colspan="2"></td>
+        <td style="border-radius: 0px 30px 0px 0px;"></td>
+      </tr>
+      <tr class="bordopuntato">
+        <td></td>
+        <td><a href="https://it.wikipedia.org/wiki/Barack_Obama"><img class="obama" src="assets/obama.jpg"></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="bordopuntato">
+        <td></td>
+        <td><a href="https://it.wikipedia.org/wiki/Barack_Obama"><img class="obama" src="assets/obama.jpg"></a></td>
+        <td></td>
+        <td></td>
+        <td>prova testo</td>
+      </tr>
+      <tr class="bordopuntato">
+        <td style="border-radius: 0px 0px 0px 30px;"></td>
+        <td><a href="https://it.wikipedia.org/wiki/Barack_Obama"><img class="obama" src="assets/obama.jpg"></a></td>
+        <td></td>
+        <td></td>
+        <td style="border-radius: 0px 0px 30px 0px;"></td>
+      </tr>
+    </table>
+    <hr>
+    <div>
+      <p class="grassetto">la colazione di Barack Obama</p>
+      <ul>
+        <li>coffee</li>
+        <li>bread</li>
+        <li>jam</li>
+        <li>peanut butter</li>
+    </ul>
+    </div>
+    <footer class="nascondi">
+      Rick Corti è un fan di Barack Obama, ma non condivide la sua colazione troppo ricca di grassi. <br>Rick predilige una colazione salata, con affettati magri e pane integrale
+    </footer>
+  </body>
+</html>
