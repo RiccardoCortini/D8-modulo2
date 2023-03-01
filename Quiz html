@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Quiz di fine modulo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="quiz.css">
+    <script src='quiz.js'></script>
+</head>
+<body>
+    <header>
+        <h1>Quiz di fine modulo!</h1>
+    </header>
+    <main id="mainContent">
+    </main>
+    <button id="invio" onclick="calcolaRisultato()">Invio risultato</button>
+    <button id="reset" onclick="resetQuiz()">Reset</button>
+    <br>
+    <div id="output" style="display:none;">Il risultato è:<span id="punteggio"></span>
+    </div>
+    <footer>
+        <p>Sicuro di aver risposto bene a tutte le domande? Se vuoi puoi resettare il tutto e rifare il test daccapo</p>
+    </footer>
+</body>
+</html>
