@@ -1,0 +1,25 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+    background-color: aquamarine;
+    border: solid 30px black;
+    border-radius: 50px;
+}
+button {
+    background-color: black;
+    color: aquamarine;
+    border-radius: 50px 20px;
+    width: 130px;
+    height: 40px;
+    margin-left: 20px;
+}
+button:hover {
+    cursor: pointer;
+    color: black;
+    background-color: yellow;
+}
+input {
+    cursor: pointer;
+}
+p {
+    font-style: italic;
+}
